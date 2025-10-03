@@ -1,43 +1,39 @@
 pipeline {
   agent any
-  tools {
-    // Make sure you have a NodeJS installation named "Node18"
-    nodejs 'Node18'
-  }
+  tools { nodejs 'Node22' } // or whatever you named your NodeJS tool
 
   stages {
     stage('Build') {
       steps {
         echo 'Installing dependencies...'
-        sh 'npm install'
+        bat 'npm install'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Running Mocha tests...'
-        sh 'npm test'
+        bat 'npm test'
       }
     }
 
     stage('Code Quality') {
       steps {
         echo 'Running ESLint for code quality checks...'
-        sh 'npx eslint . || true'
+        bat 'npx eslint . || exit /b 0'
       }
     }
 
     stage('Security') {
       steps {
         echo 'Running npm audit for vulnerabilities...'
-        sh 'npm audit --audit-level=high || true'
+        bat 'npm audit --audit-level=high || exit /b 0'
       }
     }
   }
 
   post {
     always {
-      // Archive coverage or other build artifacts if present
       archiveArtifacts artifacts: '**/coverage*/**', allowEmptyArchive: true
     }
   }
