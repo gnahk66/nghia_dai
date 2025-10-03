@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên Mật Khẩu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Đổi Mật Khẩu</h1>
+    </header>
+    <div class="container">
+        <div id="changePasswordSection">
+            <h2>Đổi Mật Khẩu</h2>
+            <form id="changePasswordForm">
+                <label for="usernameChange">Tên đăng nhập:</label>
+                <input type="text" id="usernameChange" required>
+
+                <label for="oldPassword">Mật khẩu cũ:</label>
+                <input type="password" id="oldPassword" required>
+
+                <label for="newPassword">Mật khẩu mới:</label>
+                <input type="password" id="newPassword" required>
+
+                <label for="confirmPassword">Xác nhận mật khẩu mới:</label>
+                <input type="password" id="confirmPassword" required>
+
+                <button type="submit">Đổi mật khẩu</button>
+            </form>
+        </div>
+
+        <button id="forgotPasswordButton">Quên Mật Khẩu</button>
+
+        <div id="forgotPasswordSection" class="hidden">
+            <h2>Quên Mật Khẩu</h2>
+            <form id="forgotPasswordForm">
+                <label for="usernameForgot">Tên đăng nhập:</label>
+                <input type="text" id="usernameForgot" required>
+
+                <label for="newPasswordForgot">Mật khẩu mới:</label>
+                <input type="password" id="newPasswordForgot" required>
+
+                <label for="confirmPasswordForgot">Xác nhận mật khẩu mới:</label>
+                <input type="password" id="confirmPasswordForgot" required>
+
+                <button type="submit">Tạo mật khẩu mới</button>
+            </form>
+        </div>
+
+        <p>
+            <a href="login.html">Quay lại trang đăng nhập</a>
+        </p>
+    </div>
+    <script>
+        // JavaScript to toggle the "Quên Mật Khẩu" section
+        const forgotPasswordButton = document.getElementById("forgotPasswordButton");
+        const forgotPasswordSection = document.getElementById("forgotPasswordSection");
+
+        forgotPasswordButton.addEventListener("click", () => {
+            // Toggle the visibility of the forgot password section
+            forgotPasswordSection.classList.toggle("hidden");
+        });
+
+        // JavaScript for changing password
+        document.getElementById("changePasswordForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("usernameChange").value.trim();
+            const oldPassword = document.getElementById("oldPassword").value;
+            const newPassword = document.getElementById("newPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (!username) {
+                alert("Vui lòng nhập tên đăng nhập.");
+                return;
+            }
+
+            if (oldPassword !== "admin123") { // Example password validation
+                alert("Mật khẩu cũ không chính xác!");
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
+                return;
+            }
+
+            alert(`Mật khẩu của tài khoản ${username} đã được đổi thành công!`);
+            document.getElementById("changePasswordForm").reset();
+        });
+
+        // JavaScript for forgot password
+        document.getElementById("forgotPasswordForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = document.getElementById("usernameForgot").value.trim();
+            const newPasswordForgot = document.getElementById("newPasswordForgot").value;
+            const confirmPasswordForgot = document.getElementById("confirmPasswordForgot").value;
+
+            if (!username) {
+                alert("Vui lòng nhập tên đăng nhập.");
+                return;
+            }
+
+            if (newPasswordForgot !== confirmPasswordForgot) {
+                alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
+                return;
+            }
+
+            alert(`Mật khẩu của tài khoản ${username} đã được tạo lại thành công!`);
+            document.getElementById("forgotPasswordForm").reset();
+        });
+    </script>
+</body>
+</html>

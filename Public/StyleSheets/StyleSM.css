@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light gray background for better readability */
+}
+
+header {
+    background: linear-gradient(90deg, #ff8c00, #e07e00); /* Gradient for header */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333; /* Dark gray for headers */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure contents fit within rounded corners */
+}
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #ff8c00; /* Bright orange for headers */
+        color: white;
+        text-transform: uppercase; /* Capitalize header text */
+        font-weight: bold;
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }
+
+    table tbody tr:nth-child(odd) {
+        background-color: white; /* White for odd rows */
+    }
+
+    table tbody tr:hover {
+        background-color: #ffe5b4; /* Light orange hover effect */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #666; /* Medium gray for labels */
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc; /* Light gray border */
+        border-radius: 5px; /* Rounded corners */
+        transition: border-color 0.3s ease; /* Smooth border color change */
+    }
+
+        .form-group input:focus {
+            border-color: #ff8c00; /* Bright orange border on focus */
+        }
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff8c00; /* Bright orange for buttons */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger text for buttons */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth hover effects */
+}
+
+    button:hover {
+        background-color: #e07e00; /* Darker orange on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Smaller padding for smaller buttons */
+    }
+}

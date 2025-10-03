@@ -1,0 +1,318 @@
+﻿/* Reset margin and padding for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    background-color: #f7f7f7; /* Light gray background for better contrast */
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 600px; /* Maximum width for readability */
+    margin: 0 auto; /* Center-align the container */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px; /* Space inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(90deg, rgba(255, 140, 0, 1) 0%, rgba(255, 99, 71, 1) 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 600px; /* Matches container width */
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto 20px auto; /* Auto-center and add spacing below */
+}
+
+    /* Header image styles */
+    header img.header-image {
+        width: 5%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+/* Building image styles */
+.building-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Header text */
+h2, h3 {
+    text-align: center;
+    color: #333; /* Dark gray for titles */
+    margin-bottom: 20px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666; /* Medium gray for text */
+}
+
+/* Input fields */
+input[type="text"], input[type="password"], input[type="number"] {
+    width: 100%; /* Full width for consistency */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s;
+}
+
+    /* Input focus styles */
+    input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+        border-color: #4CAF50; /* Green border on focus */
+    }
+
+/* Button styles */
+button {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #ff8c00; /* Orange background */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #e07e00; /* Darker orange on hover */
+    }
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Smaller padding for mobile */
+    }
+
+    h2, h3 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Reduced padding for smaller buttons */
+    }
+
+    header img.header-image,
+    .building-image {
+        margin-top: 15px; /* Reduced spacing for smaller screens */
+    }
+}
+/* General button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8c00; /* Bright orange */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 10px; /* Add space below each button */
+}
+
+    /* Hover effects for buttons */
+    button:hover {
+        background-color: #e07e00; /* Darker orange */
+        transform: translateY(-2px); /* Subtle lift effect */
+    }
+
+    /* Add specific spacing to separate the two buttons */
+    button#forgotPasswordButton {
+        margin-top: 20px; /* Adds extra space from "Đổi Mật Khẩu" button */
+    }
+/* Format the image */
+.formatted-image {
+    display: block;
+    max-width: 80%; /* Makes sure the image doesn't take more than 80% of the container width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 20px auto; /* Centers the image and adds spacing */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border: 2px solid #f0f0f0; /* Adds a light border */
+    background-color: #ffffff; /* Ensures a white background around the image */
+}
+
+
+
+
+
+
+/* Apply Roboto font globally */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Optional: Light background for better readability */
+    color: #333; /* Optional: Neutral text color */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+    header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+/* Form Styles */
+form label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+}
+
+form input,
+form button {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px 0 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+/* Table Styling */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Ensure the table scrolls on small screens */
+}
+
+    .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Clip contents to fit rounded corners */
+        background-color: #fff; /* White background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .table-container thead {
+        background: linear-gradient(90deg, #ff8c00, #e07e00); /* Gradient header */
+        color: white;
+        text-transform: uppercase; /* Makes header text uppercase */
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    .table-container th,
+    .table-container td {
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #ddd; /* Light border between cells */
+    }
+
+    .table-container tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Light gray for alternate rows */
+    }
+
+    .table-container tbody tr:nth-child(odd) {
+        background-color: #fff; /* White for odd rows */
+    }
+
+    .table-container tbody tr:hover {
+        background-color: #ffe5b4; /* Light orange hover effect */
+        transition: background-color 0.3s; /* Smooth transition for hover */
+    }
+
+    /* Interactive elements in the table */
+    .table-container input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.action-buttons button {
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .action-buttons button:hover {
+        background-color: #e07e00; /* Darker orange on hover */
+    }
+
+    .action-buttons button.delete {
+        background-color: #e74c3c; /* Red for delete buttons */
+    }
+
+        .action-buttons button.delete:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .table-container table {
+        font-size: 0.9rem; /* Smaller text for smaller screens */
+    }
+}
+#registerSection {
+    background-color: #fff; /* Màu nền trắng */
+    border: 1px solid #ddd; /* Viền nhẹ */
+    border-radius: 10px; /* Góc bo tròn */
+    padding: 20px; /* Đệm bên trong */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    margin-top: 20px; /* Khoảng cách trên */
+    display: none; /* Ẩn mặc định */
+}
+
+#toggleRegisterButton a {
+    color: #ff8c00; /* Màu cam sáng */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    font-weight: bold; /* In đậm */
+    cursor: pointer; /* Con trỏ */
+    transition: color 0.3s; /* Chuyển động mượt */
+}
+
+    #toggleRegisterButton a:hover {
+        color: #e07e00; /* Cam đậm khi hover */
+
+    }
+
+
+

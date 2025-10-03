@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Kho Hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Quản Lý Kho Hàng</h1>
+    </header>
+
+    <div class="container">
+        <h2>Nhập Kho</h2>
+
+        <form id="inventoryForm">
+            <div class="form-group">
+                <label for="productName">Tên sản phẩm:</label>
+                <input type="text" id="productName" placeholder="Nhập tên sản phẩm" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Số lượng:</label>
+                <input type="number" id="quantity" placeholder="Nhập số lượng" required>
+            </div>
+
+            <button type="button" id="addProduct">Thêm Vào Kho</button>
+        </form>
+
+        <h2>Danh Sách Kho</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Số Lượng</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="logic1.js"></script>
+</body>
+</html>
