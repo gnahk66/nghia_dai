@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools { nodejs 'Node22' } // or whatever you named your NodeJS tool
+  tools { nodejs 'Node18' } // or whatever you named your NodeJS tool
 
   stages {
     stage('Build') {
